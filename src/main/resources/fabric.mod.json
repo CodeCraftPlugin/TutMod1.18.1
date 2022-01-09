@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "mccourse",
+  "version": "${version}",
+
+  "name": "Mc Course Mod",
+  "description": "Tutorial Mod as to follow course",
+  "authors": [
+    "CodeCraft!"
+  ],
+  "license": "CC0-1.0",
+  "icon": "assets/mccourse/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.codecraft.mccourse.MccourseMod"
+    ]
+  },
+  "mixins": [
+    "mccourse.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
