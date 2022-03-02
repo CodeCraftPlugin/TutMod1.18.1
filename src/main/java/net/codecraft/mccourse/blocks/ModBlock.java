@@ -13,7 +13,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlock {
     public static final Block STEEL_BLOCK = registerBlock("steel_block",new Block(FabricBlockSettings.of(Material.METAL)
-                    .requiresTool().),
+                    .requiresTool()),
             ItemGroup.MISC);
 
     private static Block registerBlock(String name, Block block, ItemGroup itemGroup){
@@ -24,6 +24,9 @@ public class ModBlock {
     private static Item registerBlockItem(String name, Block block, ItemGroup itemGroup) {
         return Registry.register(Registry.ITEM,new Identifier(MccourseMod.MOD_ID,name),
                 new BlockItem(block,new FabricItemSettings().group(itemGroup)));
+    }
+    public static void registerModBlock(){
+        System.out.println("registering Blocks "+MccourseMod.MOD_ID);
     }
 
 }
