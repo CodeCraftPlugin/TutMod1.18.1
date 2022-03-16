@@ -10,10 +10,10 @@ import net.minecraft.util.registry.Registry;
 public class ModItem {
     //Items
    public static final Item STEEL_INGOT = registerItem("steel_ingot",
-            new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+            new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
     //Methods
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(MccourseMod.MOD_ID, name), item);
+        return Registry.register(Registry.ITEM, new Identifier(MccourseMod.MOD_ID, name),item);
     }
     public static void registerModItem(){
         MccourseMod.LOGGER.info("The Item are registered by"+MccourseMod.MOD_ID);

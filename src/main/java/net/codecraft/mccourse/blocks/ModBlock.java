@@ -1,6 +1,7 @@
 package net.codecraft.mccourse.blocks;
 
 import net.codecraft.mccourse.MccourseMod;
+import net.codecraft.mccourse.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -14,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 public class ModBlock {
     public static final Block STEEL_BLOCK = registerBlock("steel_block",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool()),
-            ItemGroup.MISC);
+            ModItemGroup.TUTMODGENERAL);
 
     private static Block registerBlock(String name, Block block, ItemGroup itemGroup){
         registerBlockItem(name,block,itemGroup);
