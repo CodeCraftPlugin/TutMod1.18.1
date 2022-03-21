@@ -1,4 +1,6 @@
 {
   "item.mccourse.steel_ingot": "Steel Ingot",
-  "block.mccourse.steel_bock": "Steel Block"
+  "block.mccourse.steel_block": "Steel Block",
+  "itemGroup.mccourse.tutmodgeneral": "Tutorial Mod General",
+  "item.mccourse.dowsing_rod.no_valuables": "No Valuables found!"
 }

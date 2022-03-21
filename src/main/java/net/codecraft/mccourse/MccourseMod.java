@@ -3,6 +3,11 @@ package net.codecraft.mccourse;
 import net.codecraft.mccourse.blocks.ModBlock;
 import net.codecraft.mccourse.item.ModItem;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.player.PlayerEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

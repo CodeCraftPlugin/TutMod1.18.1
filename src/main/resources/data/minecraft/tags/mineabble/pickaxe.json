@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mccourse:steel_block",
+    "mccourse:steel_block",
+    "mccourse:raw_steel_block",
+    "mccourse:deepslate_steel_ore"
+  ]
+}

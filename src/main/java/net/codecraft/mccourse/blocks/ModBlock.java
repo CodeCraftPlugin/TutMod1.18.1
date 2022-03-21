@@ -16,6 +16,15 @@ public class ModBlock {
     public static final Block STEEL_BLOCK = registerBlock("steel_block",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool()),
             ModItemGroup.TUTMODGENERAL);
+    public static final Block STEEL_ORE = registerBlock("steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
+                    .requiresTool()),
+            ModItemGroup.TUTMODGENERAL);
+    public static final Block RAW_ORICHALUM_BLOCK = registerBlock("raw_orichalum_block",new Block(FabricBlockSettings.of(Material.METAL)
+                    .requiresTool()),
+            ModItemGroup.TUTMODGENERAL);
+    public static final Block DEEPSLATE_ORICHALUM_ORE = registerBlock("deepslate_orichalum_ore",new Block(FabricBlockSettings.of(Material.METAL)
+                    .requiresTool()),
+            ModItemGroup.TUTMODGENERAL);
 
     private static Block registerBlock(String name, Block block, ItemGroup itemGroup){
         registerBlockItem(name,block,itemGroup);
