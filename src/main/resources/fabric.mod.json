@@ -15,6 +15,9 @@
   "entrypoints": {
     "main": [
       "net.codecraft.mccourse.MccourseMod"
+    ],
+    "client": [
+      "net.codecraft.mccourse.MccourseModClient"
     ]
   },
   "mixins": [
