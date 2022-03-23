@@ -16,12 +16,9 @@ public class ModItem {
     public static final Item MJOLLNIR  = registerItem("mjollnir",new Leonear(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
    public static final Item STEEL_INGOT = registerItem("steel_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
-   public static final Item RAW_ORICHALCUM = registerItem("raw_orichalum",
+   public static final Item RAW_STEEL = registerItem("raw_steel",
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
-    public static final Item CHICKEN = registerItem("chicken",
-            new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(5).build()).group(ModItemGroup.TUTMODGENERAL)));
-    //Methods
-    private static Item registerItem(String name, Item item) {
+        private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MccourseMod.MOD_ID, name),item);
     }
     public static void registerModItem(){

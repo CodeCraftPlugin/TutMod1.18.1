@@ -14,7 +14,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlock {
     public static final Block STEEL_BLOCK = registerBlock("steel_block",new Block(FabricBlockSettings.of(Material.METAL)
-                    .requiresTool()),
+                    .requiresTool().nonOpaque()),
             ModItemGroup.TUTMODGENERAL);
     public static final Block STEEL_ORE = registerBlock("steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool()),

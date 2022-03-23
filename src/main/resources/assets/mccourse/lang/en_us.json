@@ -1,6 +1,29 @@
 {
   "item.mccourse.steel_ingot": "Steel Ingot",
+  "item.mccourse.steel_nugget": "Steel Nugget",
+  "item.mccourse.raw_steel": "Raw Steel",
+  "item.mccourse.dowsing_rod": "Dowsing Rod",
+  "item.mccourse.turnip": "Turnip",
+  "item.mccourse.coal_sliver": "Coal Sliver",
+
   "block.mccourse.steel_block": "Steel Block",
-  "itemGroup.mccourse.tutmodgeneral": "Tutorial Mod General",
-  "item.mccourse.dowsing_rod.no_valuables": "No Valuables found!"
+  "block.mccourse.steel_ore": "Steel Ore",
+  "block.mccourse.raw_steel_block": "Raw Steel Block",
+  "block.mccourse.deepslate_steel_ore": "Deepslate Steel Ore",
+  "block.mccourse.speedy_block": "Speedy Block",
+  "block.mccourse.steel_stairs": "Steel Stairs",
+  "block.mccourse.steel_slab": "Steel Slab",
+  "block.mccourse.steel_button": "Steel Button",
+  "block.mccourse.steel_pressure_plate": "Steel Pressure Plate",
+  "block.mccourse.steel_fence": "Steel Fence",
+  "block.mccourse.steel_fence_gate": "Steel Fence Gate",
+  "block.mccourse.steel_wall": "Steel Wall",
+  "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
+  "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
+
+  "itemGroup.mccourse.tutmodgeneral": "Tutorial Mod",
+
+  "item.mccourse.dowsing_rod.no_valuables": "No Valuables found!",
+  "item.mccourse.dowsing_rode.tooltip.shift": "Right Click to find valuables",
+  "item.mccourse.dowsing_rode.tooltip": "Press §eSHIFT§r for more Information"
 }

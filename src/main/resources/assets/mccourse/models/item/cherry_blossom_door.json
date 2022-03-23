@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mccourse:item/raw_orichalum"
+    "layer0": "mccourse:item/cherry_blossom_door"
   }
 }
