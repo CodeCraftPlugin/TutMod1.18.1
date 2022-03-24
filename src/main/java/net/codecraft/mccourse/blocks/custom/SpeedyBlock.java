@@ -21,8 +21,7 @@ public class SpeedyBlock extends Block {
         super(settings);
     }
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos,
-                              PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos,PlayerEntity player, Hand hand, BlockHitResult hit) {
         // Called 4 time on right click:
         // 2 Times on the Server (for each Hand)
         // 2 Times on the Client (for each Hand)

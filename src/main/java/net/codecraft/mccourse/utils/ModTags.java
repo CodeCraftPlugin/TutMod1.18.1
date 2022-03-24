@@ -11,9 +11,9 @@ public class ModTags {
         public static final Tag.Identified<Block> DOWSING_ROD_DETECTABLE_BLOCKS =
                 createTag("dowsing_rod_detectable_blocks");
 
-        public static final Tag.Identified<Block> ORICHALCUM_BLOCKS =
+        public static final Tag.Identified<Block> STEEL_BLOCKS =
                 createCommonTag("steel_blocks");
-        public static final Tag.Identified<Block> ORICHALCUM_ORES =
+        public static final Tag.Identified<Block> STEEL_ORES =
                 createCommonTag("steel_ores");
 
 
@@ -27,8 +27,8 @@ public class ModTags {
     }
 
     public static class Items {
-        public static final Tag.Identified<Item> ORICHALCUM_INGOTS = createCommonTag("orichalcum_ingots");
-        public static final Tag.Identified<Item> ORICHALCUM_NUGGETS = createCommonTag("orichalcum_nuggets");
+        public static final Tag.Identified<Item> STEEL_INGOTS = createCommonTag("steel_ingots");
+        public static final Tag.Identified<Item> STEEL_NUGGETS = createCommonTag("steel_nuggets");
 
         private static Tag.Identified<Item> createTag(String name) {
             return TagFactory.ITEM.create(new Identifier(MccourseMod.MOD_ID, name));
