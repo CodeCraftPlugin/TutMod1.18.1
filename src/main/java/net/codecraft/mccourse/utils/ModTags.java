@@ -10,7 +10,8 @@ public class ModTags {
     public static class Blocks {
         public static final Tag.Identified<Block> VALUABLEBLOCKS =
                 createTag("valuableblocks");
-
+        public static final Tag.Identified<Block> PAXEL =
+                createTag("mineable/paxel");
         public static final Tag.Identified<Block> STEEL_BLOCKS =
                 createCommonTag("steel_blocks");
         public static final Tag.Identified<Block> STEEL_ORES =
