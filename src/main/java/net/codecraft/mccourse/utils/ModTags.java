@@ -8,8 +8,8 @@ import net.minecraft.util.Identifier;
 
 public class ModTags {
     public static class Blocks {
-        public static final Tag.Identified<Block> DOWSING_ROD_DETECTABLE_BLOCKS =
-                createTag("dowsing_rod_detectable_blocks");
+        public static final Tag.Identified<Block> VALUABLEBLOCKS =
+                createTag("valuableblocks");
 
         public static final Tag.Identified<Block> STEEL_BLOCKS =
                 createCommonTag("steel_blocks");

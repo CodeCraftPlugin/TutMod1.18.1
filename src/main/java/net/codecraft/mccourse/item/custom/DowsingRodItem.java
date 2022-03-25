@@ -58,7 +58,7 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
+        return ModTags.Blocks.VALUABLEBLOCKS.contains(block);
     }
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
