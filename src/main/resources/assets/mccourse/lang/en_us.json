@@ -5,6 +5,16 @@
   "item.mccourse.dowsing_rod": "Dowsing Rod",
   "item.mccourse.turnip": "Turnip",
   "item.mccourse.coal_sliver": "Coal Sliver",
+  "item.mccourse.steel_pickaxe": "Steel Pickaxe",
+  "item.mccourse.steel_axe": "Steel Axe",
+  "item.mccourse.steel_sword": "Steel Sword",
+  "item.mccourse.steel_shovel": "Steel Shovel",
+  "item.mccourse.steel_paxel": "Steel Paxel",
+  "item.mccourse.steel_helmet": "Steel Helmet",
+  "item.mccourse.steel_chestplate": "Steel Chestplate",
+  "item.mccourse.steel_leggings": "Steel Leggings",
+  "item.mccourse.steel_boots": "Steel Boots",
+
 
   "block.mccourse.steel_block": "Steel Block",
   "block.mccourse.steel_ore": "Steel Ore",
