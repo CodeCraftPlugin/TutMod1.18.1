@@ -1,7 +1,9 @@
 package net.codecraft.mccourse;
 
 import net.codecraft.mccourse.blocks.ModBlock;
+import net.codecraft.mccourse.enchantment.ModEnchantments;
 import net.codecraft.mccourse.item.ModItem;
+import net.codecraft.mccourse.utils.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -25,6 +27,8 @@ public class MccourseMod implements ModInitializer {
 		// Proceed with mild caution
 		ModBlock.registerModBlock();
 		ModItem.registerModItem();
+		ModRegistries.registerModStuffs();
+		ModEnchantments.registerMccourseEnchantment();
 
 		LOGGER.info("Hello Fabric world!");
 	}
