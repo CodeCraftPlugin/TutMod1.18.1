@@ -1,14 +1,16 @@
 package net.codecraft.mccourse.item.custom;
 
+import net.codecraft.mccourse.item.*;
+import net.codecraft.mccourse.utils.InventoryUtil;
 import net.codecraft.mccourse.utils.ModTags;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.*;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -37,6 +39,10 @@ public class DowsingRodItem extends Item {
                 if(isValuableBlock(blockBelow)) {
                     outputValuableCoordinates(positionClicked, player, blockBelow, positionClicked.getY()- i);
                     foundBlock = true;
+                    if (InventoryUtil.hasPlayerStackInInventory(player,ModItem.DATA_TABLET)){
+                        addNbtToDataTablet(player,positionClicked.add(0,-i,0),blockBelow);
+                    }
+
                     break;
                 }
             }
@@ -56,6 +62,16 @@ public class DowsingRodItem extends Item {
         player.sendMessage(new LiteralText("Found " + blockBelow.asItem().getName().getString() + " at " +
                 "(" + blockPos.getX() + ", " + yFound + "," + blockPos.getZ() + ")"), false);
     }
+    private void addNbtToDataTablet(PlayerEntity player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet =
+                player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItem.DATA_TABLET));
+
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("mccourse.last_ore", "Found " + blockBelow.asItem().getName().getString() + " at (" +
+                pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
+
+        dataTablet.setNbt(nbtData);
+    }
 
     private boolean isValuableBlock(Block block) {
         return ModTags.Blocks.VALUABLEBLOCKS.contains(block);
@@ -68,5 +84,6 @@ public class DowsingRodItem extends Item {
             tooltip.add(new TranslatableText("item.mccourse.dowsing_rode.tooltip"));
         }
     }
+
 }
 

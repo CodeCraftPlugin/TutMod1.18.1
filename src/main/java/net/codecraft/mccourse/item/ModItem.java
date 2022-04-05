@@ -21,6 +21,8 @@ public class ModItem {
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL).food(ModFoodComponents.TURNIP)));
     public static final Item COAL_SLIVER = registerItem("coal_sliver",
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
+    public static final Item DATA_TABLET = registerItem("data_tablet",
+            new DataTabletItem(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
     //Tools
     public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe",
             new ModPickaxeItem(ModToolMaterial.STEEL,-3,5f,new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
