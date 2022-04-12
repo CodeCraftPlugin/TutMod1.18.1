@@ -15,6 +15,7 @@
   "item.mccourse.steel_leggings": "Steel Leggings",
   "item.mccourse.steel_boots": "Steel Boots",
   "item.mccourse.data_tablet": "Data Tablet",
+  "item.mccourse.turnip_seeds": "Turnip Seeds",
 
   "enchantment.mccourse.lightings_stricker": "Lightning Striker",
 
@@ -33,6 +34,7 @@
   "block.mccourse.steel_wall": "Steel Wall",
   "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
   "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
+  "block.mccourse.turnip_crop": "Turnip Crop",
 
   "itemGroup.mccourse.tutmodgeneral": "Tutorial Mod",
 

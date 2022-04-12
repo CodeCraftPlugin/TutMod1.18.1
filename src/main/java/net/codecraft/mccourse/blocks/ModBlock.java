@@ -2,6 +2,7 @@ package net.codecraft.mccourse.blocks;
 
 import net.codecraft.mccourse.MccourseMod;
 import net.codecraft.mccourse.blocks.custom.*;
+import net.codecraft.mccourse.blocks.custom.crops.TurnipCrop;
 import net.codecraft.mccourse.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -57,6 +58,14 @@ public class ModBlock {
 
     public static final Block CHEERY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
             new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroup.TUTMODGENERAL);
+
+    public static final Block TURNP_CROP = registerBlockWithoutItem("turnip_crop",
+            new TurnipCrop(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
+
+    private static Block registerBlockWithoutItem(String name, Block block){
+        return Registry.register(Registry.BLOCK,new Identifier(MccourseMod.MOD_ID,name),block);
+    }
+
 
     private static Block registerBlock(String name, Block block, ItemGroup itemGroup){
         registerBlockItem(name,block,itemGroup);

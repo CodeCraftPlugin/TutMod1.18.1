@@ -1,6 +1,7 @@
 package net.codecraft.mccourse.item;
 
 import net.codecraft.mccourse.MccourseMod;
+import net.codecraft.mccourse.blocks.ModBlock;
 import net.codecraft.mccourse.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
@@ -23,6 +24,8 @@ public class ModItem {
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
     public static final Item DATA_TABLET = registerItem("data_tablet",
             new DataTabletItem(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
+    public static final Item TURNIP_SEEDS = registerItem("turnip_seeds",
+            new AliasedBlockItem(ModBlock.TURNP_CROP,new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
     //Tools
     public static final Item STEEL_PICKAXE = registerItem("steel_pickaxe",
             new ModPickaxeItem(ModToolMaterial.STEEL,-3,5f,new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
