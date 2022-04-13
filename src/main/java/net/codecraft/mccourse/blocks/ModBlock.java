@@ -7,6 +7,8 @@ import net.codecraft.mccourse.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -43,7 +45,6 @@ public class ModBlock {
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                     FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
-
     public static final Block STEEL_FENCE = registerBlock("steel_fence",
             new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
@@ -61,6 +62,9 @@ public class ModBlock {
 
     public static final Block TURNP_CROP = registerBlockWithoutItem("turnip_crop",
             new TurnipCrop(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
+    //Flower
+    public static final Block PINK_ROSE = registerBlockWithoutItem("pink_rose",
+            new FlowerBlock(StatusEffects.DOLPHINS_GRACE,9,FabricBlockSettings.copyOf(Blocks.PINK_TULIP)));
 
     private static Block registerBlockWithoutItem(String name, Block block){
         return Registry.register(Registry.BLOCK,new Identifier(MccourseMod.MOD_ID,name),block);
