@@ -4,6 +4,7 @@
   "package": "net.codecraft.mccourse.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "EntityDataSaver"
   ],
   "client": [
     "MccourseModMixin"
