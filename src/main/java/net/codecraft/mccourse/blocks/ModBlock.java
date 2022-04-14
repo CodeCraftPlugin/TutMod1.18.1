@@ -63,8 +63,8 @@ public class ModBlock {
     public static final Block TURNP_CROP = registerBlockWithoutItem("turnip_crop",
             new TurnipCrop(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
     //Flower
-    public static final Block PINK_ROSE = registerBlockWithoutItem("pink_rose",
-            new FlowerBlock(StatusEffects.DOLPHINS_GRACE,9,FabricBlockSettings.copyOf(Blocks.PINK_TULIP)));
+    public static final Block PINK_ROSE = registerBlock("pink_rose",
+            new FlowerBlock(StatusEffects.DOLPHINS_GRACE,9,FabricBlockSettings.copyOf(Blocks.PINK_TULIP)),ModItemGroup.TUTMODGENERAL);
 
     private static Block registerBlockWithoutItem(String name, Block block){
         return Registry.register(Registry.BLOCK,new Identifier(MccourseMod.MOD_ID,name),block);
