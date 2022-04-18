@@ -1,6 +1,7 @@
 package net.codecraft.mccourse.item.custom;
 
 import net.codecraft.mccourse.item.*;
+import net.codecraft.mccourse.sound.Sounds;
 import net.codecraft.mccourse.utils.InventoryUtil;
 import net.codecraft.mccourse.utils.ModTags;
 import net.minecraft.block.Block;
@@ -11,6 +12,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.*;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -39,6 +41,8 @@ public class DowsingRodItem extends Item {
                 if(isValuableBlock(blockBelow)) {
                     outputValuableCoordinates(positionClicked, player, blockBelow, positionClicked.getY()- i);
                     foundBlock = true;
+                    context.getWorld().playSound(player, positionClicked, Sounds.DOWSING_ROD_FOUND_ORE,
+                            SoundCategory.BLOCKS, 1f, 1f);
                     if (InventoryUtil.hasPlayerStackInInventory(player,ModItem.DATA_TABLET)){
                         addNbtToDataTablet(player,positionClicked.add(0,-i,0),blockBelow);
                     }

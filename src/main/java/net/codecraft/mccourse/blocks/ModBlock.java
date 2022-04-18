@@ -20,7 +20,7 @@ public class ModBlock {
                     .requiresTool().nonOpaque()),
             ModItemGroup.TUTMODGENERAL);
     public static final Block STEEL_ORE = registerBlock("steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
-                    .requiresTool()),
+                    .requiresTool().strength(0.1f)),
             ModItemGroup.TUTMODGENERAL);
     public static final Block RAW_STEEL_BLOCK = registerBlock("raw_steel_block",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool()),
@@ -29,42 +29,45 @@ public class ModBlock {
                     .requiresTool()),
             ModItemGroup.TUTMODGENERAL);
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
-            new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+            new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block STEEL_STAIRS = registerBlock("steel_stairs",
             new ModStairsBlock(ModBlock.STEEL_BLOCK.getDefaultState(),
-                    FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+                    FabricBlockSettings.of(Material.METAL).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block STEEL_SLAB = registerBlock("steel_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+            new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block STEEL_BUTTON = registerBlock("steel_button",
-            new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+            new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block STEEL_PRESSURE_PLATE = registerBlock("steel_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
-                    FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+                    FabricBlockSettings.of(Material.METAL).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block STEEL_FENCE = registerBlock("steel_fence",
-            new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+            new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block STEEL_FENCE_GATE = registerBlock("steel_fence_gate",
-            new FenceGateBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+            new FenceGateBlock(FabricBlockSettings.of(Material.METAL).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block STEEL_WALL = registerBlock("steel_wall",
-            new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.TUTMODGENERAL);
+            new WallBlock(FabricBlockSettings.of(Material.METAL).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
-            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroup.TUTMODGENERAL);
+            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(0.1f).requiresTool().nonOpaque()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block CHEERY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
-            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroup.TUTMODGENERAL);
+            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(0.1f).requiresTool().nonOpaque()), ModItemGroup.TUTMODGENERAL);
 
     public static final Block TURNP_CROP = registerBlockWithoutItem("turnip_crop",
             new TurnipCrop(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
     //Flower
     public static final Block PINK_ROSE = registerBlock("pink_rose",
             new FlowerBlock(StatusEffects.DOLPHINS_GRACE,9,FabricBlockSettings.copyOf(Blocks.PINK_TULIP)),ModItemGroup.TUTMODGENERAL);
+
+    public static final Block POTTED_PINK_ROSE = registerBlockWithoutItem("potted_pink_rose",
+            new FlowerPotBlock(ModBlock.PINK_ROSE,FabricBlockSettings.copyOf(Blocks.PINK_TULIP)));
 
     private static Block registerBlockWithoutItem(String name, Block block){
         return Registry.register(Registry.BLOCK,new Identifier(MccourseMod.MOD_ID,name),block);

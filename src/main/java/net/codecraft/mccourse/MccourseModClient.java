@@ -16,6 +16,7 @@ public class MccourseModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlock.STEEL_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlock.TURNP_CROP, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlock.PINK_ROSE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlock.POTTED_PINK_ROSE, RenderLayer.getCutout());
         ModModelPredicateProvider.registerModModels();
     }
 }
