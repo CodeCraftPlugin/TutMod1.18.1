@@ -41,12 +41,12 @@ public class DowsingRodItem extends Item {
                 if(isValuableBlock(blockBelow)) {
                     outputValuableCoordinates(positionClicked, player, blockBelow, positionClicked.getY()- i);
                     foundBlock = true;
-                    context.getWorld().playSound(player, positionClicked, Sounds.DOWSING_ROD_FOUND_ORE,
-                            SoundCategory.BLOCKS, 1f, 1f);
+
                     if (InventoryUtil.hasPlayerStackInInventory(player,ModItem.DATA_TABLET)){
                         addNbtToDataTablet(player,positionClicked.add(0,-i,0),blockBelow);
                     }
-
+                    context.getWorld().playSound(player, positionClicked, Sounds.DOWSING_ROD_FOUND_ORE,
+                            SoundCategory.BLOCKS, 1f, 1f);
                     break;
                 }
             }

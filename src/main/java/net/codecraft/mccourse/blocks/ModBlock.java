@@ -26,7 +26,7 @@ public class ModBlock {
                     .requiresTool()),
             ModItemGroup.TUTMODGENERAL);
     public static final Block DEEPSLATE_STEEL_ORE = registerBlock("deepslate_steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
-                    .requiresTool()),
+                    .requiresTool().strength(4.5f, 3.0f)),
             ModItemGroup.TUTMODGENERAL);
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
