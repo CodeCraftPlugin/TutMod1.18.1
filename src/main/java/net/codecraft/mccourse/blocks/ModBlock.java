@@ -4,10 +4,10 @@ import net.codecraft.mccourse.MccourseMod;
 import net.codecraft.mccourse.blocks.custom.*;
 import net.codecraft.mccourse.blocks.custom.crops.TurnipCrop;
 import net.codecraft.mccourse.item.ModItemGroup;
+import net.codecraft.mccourse.sound.Sounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -19,12 +19,15 @@ public class ModBlock {
     public static final Block STEEL_BLOCK = registerBlock("steel_block",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool().nonOpaque()),
             ModItemGroup.TUTMODGENERAL);
+
     public static final Block STEEL_ORE = registerBlock("steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool().strength(0.1f)),
             ModItemGroup.TUTMODGENERAL);
+
     public static final Block RAW_STEEL_BLOCK = registerBlock("raw_steel_block",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool()),
             ModItemGroup.TUTMODGENERAL);
+
     public static final Block DEEPSLATE_STEEL_ORE = registerBlock("deepslate_steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool().strength(4.5f, 3.0f)),
             ModItemGroup.TUTMODGENERAL);
@@ -60,6 +63,11 @@ public class ModBlock {
     public static final Block CHEERY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
             new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(0.1f).requiresTool().nonOpaque()), ModItemGroup.TUTMODGENERAL);
 
+    public static final Block STEEL_LAMP = registerBlock("steel_lamp",
+            new SteelLampBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()
+                    .luminance((state) -> state.get(SteelLampBlock.CLICKED) ? 15 : 0)
+                    .sounds(Sounds.ORICHALCUM_SOUNDS)), ModItemGroup.TUTMODGENERAL);
+
     public static final Block TURNP_CROP = registerBlockWithoutItem("turnip_crop",
             new TurnipCrop(FabricBlockSettings.copyOf(Blocks.BEETROOTS)));
     //Flower
@@ -69,6 +77,7 @@ public class ModBlock {
     public static final Block POTTED_PINK_ROSE = registerBlockWithoutItem("potted_pink_rose",
             new FlowerPotBlock(ModBlock.PINK_ROSE,FabricBlockSettings.copyOf(Blocks.PINK_TULIP)));
 
+    //Methods
     private static Block registerBlockWithoutItem(String name, Block block){
         return Registry.register(Registry.BLOCK,new Identifier(MccourseMod.MOD_ID,name),block);
     }

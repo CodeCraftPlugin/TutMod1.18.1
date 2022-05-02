@@ -3,6 +3,7 @@ package net.codecraft.mccourse.item;
 import net.codecraft.mccourse.MccourseMod;
 import net.codecraft.mccourse.blocks.ModBlock;
 import net.codecraft.mccourse.item.custom.*;
+import net.codecraft.mccourse.sound.Sounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -53,6 +54,9 @@ public class ModItem {
     //Boots
     public static final Item STEEL_BOOTS = registerItem("steel_boots",
             new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlot.FEET,new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
+    //Music Disk
+    public static final Item BAR_BRAWL_MUSIC_DISK = registerItem("bar_brawl_music_disc",
+            new MusicDiskItem(9, Sounds.BAR_BRAWL,new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL).maxCount(1)));
     //Methods
    private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MccourseMod.MOD_ID, name),item);

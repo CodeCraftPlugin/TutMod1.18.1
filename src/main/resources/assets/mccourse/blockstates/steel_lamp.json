@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": { "model": "mccourse:block/steel_lamp_off" },
+    "clicked=true": { "model": "mccourse:block/steel_lamp_on" }
+  }
+}
