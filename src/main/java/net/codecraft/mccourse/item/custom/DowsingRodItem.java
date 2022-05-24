@@ -25,7 +25,7 @@ import java.util.List;
 
 public class DowsingRodItem extends Item {
     public DowsingRodItem(Settings settings) {
-        super(settings);
+        super(settings);        
     }
 
     @Override

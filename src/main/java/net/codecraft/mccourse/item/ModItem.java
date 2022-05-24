@@ -2,6 +2,7 @@ package net.codecraft.mccourse.item;
 
 import net.codecraft.mccourse.MccourseMod;
 import net.codecraft.mccourse.blocks.ModBlock;
+import net.codecraft.mccourse.fluid.Fluids;
 import net.codecraft.mccourse.item.custom.*;
 import net.codecraft.mccourse.sound.Sounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -19,6 +20,9 @@ public class ModItem {
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
     public static final Item RAW_STEEL = registerItem("raw_steel",
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
+
+    public static final Item STEEL_BOW = registerItem("steel_bow",
+            new BowItem(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
     public static final Item TURNIP = registerItem("turnip",
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL).food(ModFoodComponents.TURNIP)));
     public static final Item COAL_SLIVER = registerItem("coal_sliver",
@@ -57,6 +61,9 @@ public class ModItem {
     //Music Disk
     public static final Item BAR_BRAWL_MUSIC_DISK = registerItem("bar_brawl_music_disc",
             new MusicDiskItem(9, Sounds.BAR_BRAWL,new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL).maxCount(1)));
+    //Bucket Items
+    public static final Item HONEY_BUCKET = registerItem("honey_bucket",
+            new BucketItem(Fluids.HONEY_STILL, new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL).maxCount(1)));
     //Methods
    private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MccourseMod.MOD_ID, name),item);

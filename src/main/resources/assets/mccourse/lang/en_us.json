@@ -16,9 +16,8 @@
   "item.mccourse.steel_boots": "Steel Boots",
   "item.mccourse.data_tablet": "Data Tablet",
   "item.mccourse.turnip_seeds": "Turnip Seeds",
-  "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
   "item.mccourse.bar_brawl_music_disc": "Bar Brawl Music Disc",
-
+  "item.mccourse.steel_bow": "Steel Bow",
   "enchantment.mccourse.lightings_stricker": "Lightning Striker",
 
   "block.mccourse.steel_block": "Steel Block",
@@ -42,5 +41,6 @@
 
   "item.mccourse.dowsing_rod.no_valuables": "No Valuables found!",
   "item.mccourse.dowsing_rode.tooltip.shift": "Right Click to find valuables",
-  "item.mccourse.dowsing_rode.tooltip": "Press §eSHIFT§r for more Information"
+  "item.mccourse.dowsing_rode.tooltip": "Press §eSHIFT§r for more Information",
+  "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)"
 }

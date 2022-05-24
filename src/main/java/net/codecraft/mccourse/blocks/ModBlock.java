@@ -3,6 +3,7 @@ package net.codecraft.mccourse.blocks;
 import net.codecraft.mccourse.MccourseMod;
 import net.codecraft.mccourse.blocks.custom.*;
 import net.codecraft.mccourse.blocks.custom.crops.TurnipCrop;
+import net.codecraft.mccourse.fluid.Fluids;
 import net.codecraft.mccourse.item.ModItemGroup;
 import net.codecraft.mccourse.sound.Sounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -77,6 +78,9 @@ public class ModBlock {
     public static final Block POTTED_PINK_ROSE = registerBlockWithoutItem("potted_pink_rose",
             new FlowerPotBlock(ModBlock.PINK_ROSE,FabricBlockSettings.copyOf(Blocks.PINK_TULIP)));
 
+    //Fluids
+    public static final Block HONEY_FLUID_BLOCK = registerBlockWithoutItem("honey_fluid_block",
+            new Fluid(Fluids.HONEY_STILL,FabricBlockSettings.of(Material.WATER).nonOpaque().dropsNothing().noCollision()));
     //Methods
     private static Block registerBlockWithoutItem(String name, Block block){
         return Registry.register(Registry.BLOCK,new Identifier(MccourseMod.MOD_ID,name),block);
