@@ -42,5 +42,10 @@
   "item.mccourse.dowsing_rod.no_valuables": "No Valuables found!",
   "item.mccourse.dowsing_rode.tooltip.shift": "Right Click to find valuables",
   "item.mccourse.dowsing_rode.tooltip": "Press §eSHIFT§r for more Information",
-  "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)"
+  "item.mccourse.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
+  "advancements.steel.steel_ingot": "Modern Age",
+  "advancements.steel.steel_ingot.description": "Welcome the the Modern age",
+  "advancements.steel.steel": "Steel",
+  "advancements.steel.steel.description": "Steel"
 }

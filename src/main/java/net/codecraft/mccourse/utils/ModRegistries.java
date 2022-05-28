@@ -19,7 +19,7 @@ public class ModRegistries {
     }
 
     private static void registerFuels() {
-        System.out.println("Registering Fuels for + " + MccourseMod.MOD_ID);
+        System.out.println("Registering Fuels for " + MccourseMod.MOD_ID);
         FuelRegistry registry = FuelRegistry.INSTANCE;
         registry.add(ModItem.COAL_SLIVER,400);
     }

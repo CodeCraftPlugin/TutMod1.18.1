@@ -18,6 +18,10 @@ public class ModItem {
     public static final Item MJOLLNIR  = registerItem("mjollnir",new Leonear(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
     public static final Item STEEL_INGOT = registerItem("steel_ingot",
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
+
+    public static final Item CARBON = registerItem("carbon",
+            new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
+
     public static final Item RAW_STEEL = registerItem("raw_steel",
             new Item(new FabricItemSettings().group(ModItemGroup.TUTMODGENERAL)));
 

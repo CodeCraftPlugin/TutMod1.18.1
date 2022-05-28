@@ -13,13 +13,12 @@ public class ModEnchantments {
 
 
     private static Enchantment registerEnchantment(String name,Enchantment enchantment){
-        registerMccourseEnchantment();
         return Registry.register(Registry.ENCHANTMENT, new Identifier(MccourseMod.MOD_ID, name),enchantment);
         
     }
 
     public static void registerMccourseEnchantment() {
-        System.out.println("ddddd");
+        System.out.println("registering enchantment");
     }
 
 }

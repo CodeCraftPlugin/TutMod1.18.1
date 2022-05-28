@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "mccourse:dowsing_rod"
+    },
+    "title": "Dowsing Rod",
+    "description": "You broke the system!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "mccourse:steel_ingot",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mccourse:dowsing_rod"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

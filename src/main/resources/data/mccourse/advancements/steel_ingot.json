@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "mccourse:steel_ingot"
+    },
+    "title": {
+      "translate": "advancements.steel.steel_ingot",
+      "color": "aqua"
+    },
+    "description":{
+      "color": "aqua",
+      "translate": "advancements.steel.steel_ingot.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "mccourse:steel",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mccourse:steel_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
