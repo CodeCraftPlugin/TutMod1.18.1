@@ -14,6 +14,6 @@ public class BlockEntity {
         STEEL_MAKER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
                 new Identifier(MccourseMod.MOD_ID, "steel_maker"),
                 FabricBlockEntityTypeBuilder.create(SteelMaker::new,
-                        ModBlock.CARBONIZER1).build(null));
+                        ModBlock.CARBONIZER).build(null));
     }
 }

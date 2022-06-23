@@ -32,7 +32,7 @@ public class ModBlock {
     public static final Block DEEPSLATE_STEEL_ORE = registerBlock("deepslate_steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool().strength(4.5f, 3.0f)),
             ModItemGroup.TUTMODGENERAL);
-    public static final Block CARBONIZER1 = registerBlock("carbonizer1",new Block(FabricBlockSettings.of(Material.METAL)
+    public static final Block CARBONIZER = registerBlock("carbonizer",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool().strength(0.1f)),
             ModItemGroup.TUTMODGENERAL);
 
