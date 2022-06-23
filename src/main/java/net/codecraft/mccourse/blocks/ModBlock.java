@@ -32,6 +32,10 @@ public class ModBlock {
     public static final Block DEEPSLATE_STEEL_ORE = registerBlock("deepslate_steel_ore",new Block(FabricBlockSettings.of(Material.METAL)
                     .requiresTool().strength(4.5f, 3.0f)),
             ModItemGroup.TUTMODGENERAL);
+    public static final Block CARBONIZER = registerBlock("carbonizer",new Block(FabricBlockSettings.of(Material.METAL)
+                    .requiresTool().strength(0.1f)),
+            ModItemGroup.TUTMODGENERAL);
+
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.STONE).strength(0.1f).requiresTool()), ModItemGroup.TUTMODGENERAL);
 
@@ -81,6 +85,9 @@ public class ModBlock {
     //Fluids
     public static final Block HONEY_FLUID_BLOCK = registerBlockWithoutItem("honey_fluid_block",
             new Fluid(Fluids.HONEY_STILL,FabricBlockSettings.of(Material.WATER).nonOpaque().dropsNothing().noCollision()));
+    //BlockEntity
+
+
     //Methods
     private static Block registerBlockWithoutItem(String name, Block block){
         return Registry.register(Registry.BLOCK,new Identifier(MccourseMod.MOD_ID,name),block);

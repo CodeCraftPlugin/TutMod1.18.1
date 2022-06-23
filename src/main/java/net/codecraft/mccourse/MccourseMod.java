@@ -3,18 +3,12 @@ package net.codecraft.mccourse;
 import net.codecraft.mccourse.blocks.ModBlock;
 import net.codecraft.mccourse.enchantment.ModEnchantments;
 import net.codecraft.mccourse.item.ModItem;
+import net.codecraft.mccourse.painting.Paintings;
 import net.codecraft.mccourse.utils.LoottablesModifier;
 import net.codecraft.mccourse.utils.ModRegistries;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.player.PlayerEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import static net.codecraft.mccourse.utils.LoottablesModifier.modifyLootTables;
 
 public class MccourseMod implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -33,6 +27,7 @@ public class MccourseMod implements ModInitializer {
 		ModRegistries.registerModStuffs();
 		ModEnchantments.registerMccourseEnchantment();
 		LoottablesModifier.modifyLootTables();
+		Paintings.registerPaintings();
 
 		LOGGER.info("Hello Fabric world!");
 	}

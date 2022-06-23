@@ -7,6 +7,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.impl.client.rendering.fluid.FluidRendererHookContainer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.FluidRenderer;
@@ -33,5 +34,6 @@ public class MccourseModClient implements ClientModInitializer {
                 SimpleFluidRenderHandler.WATER_OVERLAY,14269273
         ));
         ModModelPredicateProvider.registerModModels();
+
     }
 }
