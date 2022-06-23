@@ -15,5 +15,6 @@ public class BlockEntity {
                 new Identifier(MccourseMod.MOD_ID, "steel_maker"),
                 FabricBlockEntityTypeBuilder.create(SteelMaker::new,
                         ModBlock.CARBONIZER).build(null));
+        System.out.println("test");
     }
 }
