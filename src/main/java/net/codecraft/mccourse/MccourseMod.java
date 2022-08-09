@@ -1,6 +1,7 @@
 package net.codecraft.mccourse;
 
 import net.codecraft.mccourse.blocks.ModBlock;
+import net.codecraft.mccourse.blocks.entity.BlockEntity;
 import net.codecraft.mccourse.enchantment.ModEnchantments;
 import net.codecraft.mccourse.item.ModItem;
 import net.codecraft.mccourse.painting.Paintings;
@@ -28,6 +29,7 @@ public class MccourseMod implements ModInitializer {
 		ModEnchantments.registerMccourseEnchantment();
 		LoottablesModifier.modifyLootTables();
 		Paintings.registerPaintings();
+		BlockEntity.registeredAllBlockEntity();
 
 		LOGGER.info("Hello Fabric world!");
 	}

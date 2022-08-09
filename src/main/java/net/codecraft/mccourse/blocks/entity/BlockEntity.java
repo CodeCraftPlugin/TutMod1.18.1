@@ -8,13 +8,15 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class BlockEntity {
-    public static BlockEntityType<SteelMaker> STEEL_MAKER;
+    public static final BlockEntityType<SteelMaker> STEEL_MAKER = registerBlockEntity("steel_maker",FabricBlockEntityTypeBuilder.create(SteelMaker::new,
+            ModBlock.STEEL_MAKER).build(null));
 
-    public static void registerAllEntities() {
-        STEEL_MAKER = Registry.register(Registry.BLOCK_ENTITY_TYPE,
-                new Identifier(MccourseMod.MOD_ID, "steel_maker"),
-                FabricBlockEntityTypeBuilder.create(SteelMaker::new,
-                        ModBlock.CARBONIZER).build(null));
+    private static BlockEntityType registerBlockEntity(String name,BlockEntityType blockEntityType){
+        return Registry.register(Registry.BLOCK_ENTITY_TYPE,
+                new Identifier(MccourseMod.MOD_ID, name),blockEntityType);
+    }
 
+    public static void registeredAllBlockEntity(){
+        MccourseMod.LOGGER.info("loaded all block entity");
     }
 }

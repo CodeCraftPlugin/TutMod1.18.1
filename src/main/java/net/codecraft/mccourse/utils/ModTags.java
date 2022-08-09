@@ -1,9 +1,10 @@
 package net.codecraft.mccourse.utils;
 import net.codecraft.mccourse.MccourseMod;
-import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagGroup;
+import net.minecraft.tag.TagManager;
 import net.minecraft.util.Identifier;
 
 public class ModTags {
@@ -19,11 +20,11 @@ public class ModTags {
 
 
         private static Tag.Identified<Block> createTag(String name) {
-            return TagFactory.BLOCK.create(new Identifier(MccourseMod.MOD_ID, name));
+            return TagManager.BLOCK.create(new Identifier(MccourseMod.MOD_ID, name));
         }
 
         private static Tag.Identified<Block> createCommonTag(String name) {
-            return TagFactory.BLOCK.create(new Identifier("c", name));
+            return Tag.BLOCK.create(new Identifier("c", name));
         }
     }
 
